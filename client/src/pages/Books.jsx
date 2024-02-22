@@ -6,7 +6,7 @@ const Home=()=>{
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("name");
   const [page, setPage] = useState(1);
-  const [count] = useState(3);
+  const [count] = useState(8);
 
 
   useEffect(() => {
@@ -51,16 +51,19 @@ const Home=()=>{
 
   return (
     <div className="find">
-      <div>
+      <div className="sum">
+        <h1 id="tit">Prani-Library</h1>
         <div id="se">Search Books</div>
+        <div>
         <select value={category} onChange={handleCatChange} className="sesel">
           <option value="name">Name</option>
           <option value="author">Author</option>
           <option value="subject">Subject</option>
         </select>
         <input type="text" placeholder={category} value={search} onChange={handleSearchChange} className="search"/>
+        </div>
       </div>
-      <span>No of Books : {sdata.length}</span>
+      <span id="nbk">No of Books : {sdata.length}</span>
       <table>
         <thead>
           <tr>

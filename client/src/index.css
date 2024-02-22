@@ -1,6 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital@1&family=Protest+Strike&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Bigelow+Rules&family=Kanit:ital@1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Strike&display=swap');
 body{
-    margin: 0;
+    margin: 0 0 20px 0;
+    padding: 0 0 40px 0 ; 
+    background-image: linear-gradient(rgb(251, 95, 227),rgb(157, 77, 255),rgb(115, 0, 255));
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    /* backgrou */
+    height: 100%;
+    overflow: scroll;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+#nbk{
+    font-family: 'kanit';
+    font-size: 30px;
 }
 .find{
     display: flex;
@@ -9,36 +23,52 @@ body{
     /* justify-content: center; */
     height: 100vh;
     width: 100vw;
-    padding: 50px 0 0 0;
+    /* padding: 50px 0 0 0;   */
+    margin: 0;
+    /* overflow: scroll; */
 }
 table,tr,td,th{
-    border: 2px solid black;
+    border: 5px solid black;
 }
 table{
     margin: 0 0 10px 0;
+    background-color: rgb(255, 120, 120);
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 600;
 }
 tr,td,th{
     padding: 3px 6px 3px 6px;
-    width: 100px;
+    width: 150px;
+    height: 30px;
+    background-color: rgb(253, 173, 229);
+    /* border: 100  px 10px; */
 }
 
 #se{
     font-family: "Protest Strike", sans-serif;
     font-size: 40px;
     margin: 0 0 10px 0;
+    
 }
 
 .sesel{
     height: 45px;
     font-size: 20px;
+    font-family: 'Kanit';
+    background-color: rgb(183, 183, 183);
+    border-radius: 5px 0 0 5px;
+    
 }
 .search{
     height: 40px;
     font-size: 20px;
+    font-family: 'Kanit';
+    border-radius: 0 5px 5px 0;
 }
 
 .dispf{
-    height: 25  px;
+    height: 25px;
     display: flex;
 }
 
@@ -63,4 +93,16 @@ tr,td,th{
 }
 .summas{
     background-color: green;
+    
+}
+
+#tit{
+    font-family: "Bigelow Rules";
+    font-size: 90px;
+    margin: 0;
+}
+.sum{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
