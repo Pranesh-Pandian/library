@@ -83,10 +83,15 @@ tr,td,th{
     border: 2px solid black;
 }
 .summa,.summas{
+
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    font-family: 'katin';
+}
+.summa{
+    background-color: white;
 }
 .summa:hover,.summas:hover{
     cursor: pointer;
