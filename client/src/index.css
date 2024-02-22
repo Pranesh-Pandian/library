@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital@1&family=Protest+Strike&display=swap');
+body{
+    margin: 0;
+}
+.find{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    height: 100vh;
+    width: 100vw;
+    padding: 50px 0 0 0;
+}
+table,tr,td,th{
+    border: 2px solid black;
+}
+table{
+    margin: 0 0 10px 0;
+}
+tr,td,th{
+    padding: 3px 6px 3px 6px;
+    width: 100px;
+}
+
+#se{
+    font-family: "Protest Strike", sans-serif;
+    font-size: 40px;
+    margin: 0 0 10px 0;
+}
+
+.sesel{
+    height: 45px;
+    font-size: 20px;
+}
+.search{
+    height: 40px;
+    font-size: 20px;
+}
+
+.dispf{
+    height: 25  px;
+    display: flex;
+}
+
+.buttonn{
+    margin: 0;
+    padding: 0;
+    height: 25px;
+    width: 35px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+}
+.summa,.summas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.summa:hover,.summas:hover{
+    cursor: pointer;
+}
+.summas{
+    background-color: green;
+}
