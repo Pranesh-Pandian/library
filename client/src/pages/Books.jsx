@@ -10,7 +10,7 @@ const Home=()=>{
 
 
   useEffect(() => {
-          axios.get("http://localhost:5500/books")
+          axios.get("https://library-jops.onrender.com/books")
           .then((res) => {setData(res.data);})
           .catch((err) => {console.log("Error fetching data:",err);
         });
