@@ -20,13 +20,18 @@ body::-webkit-scrollbar{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+}
+.finds{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100vh;
     width: 100vw;
-    /* padding: 50px 0 0 0;   */
     margin: 0;
-    /* overflow: scroll; */
-}
+}    
 table,tr,td,th{
     border: 5px solid black;
 }
@@ -42,7 +47,6 @@ tr,td,th{
     width: 150px;
     height: 30px;
     background-color: rgb(253, 173, 229);
-    /* border: 100  px 10px; */
 }
 
 #se{

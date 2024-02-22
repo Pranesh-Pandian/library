@@ -50,7 +50,7 @@ const Home=()=>{
   };
 
   return (
-    <div className="find">
+    <div className={sdata.length<=6 || count<=6 ? "finds" :"find"}>
       <div className="sum">
         <h1 id="tit">Prani-Library</h1>
         <div id="se">Search Books</div>
