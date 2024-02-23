@@ -42,7 +42,7 @@ const Add = () => {
     const handleClick= async e =>{
         e.preventDefault()
         try {
-            const res=await axios.post("https://localhost:5500/add",emps)
+            const res=await axios.post("https://library-jops.onrender.com/add",emps)
             if(res.data==="0") alert("Name is Empty")
             else if(res.data==="1") alert("Author is Empty")
             else if(res.data==="2") alert("Subject is Empty")
