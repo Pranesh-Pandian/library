@@ -42,7 +42,7 @@ const Add = () => {
     const handleClick= async e =>{
         e.preventDefault()
         try {
-            await axios.post("http://localhost:5500/add",emps)
+            await axios.post("https://library-jops.onrender.com/add",emps)
             alert("Succesfully added")
             navi("/")
         } catch (err) {
