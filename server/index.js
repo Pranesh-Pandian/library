@@ -29,7 +29,10 @@ app.post("/add",(req,res)=>{
     const q="insert into books (name,author,subject,date) VALUE (?)"
     const values=[req.body.name,req.body.author,req.body.subject,req.body.date]
     console.log(req.body)
-    if(values[0]===""||values[1]===""||values[2]===""||values[3]==="") return res.json("0");
+    if(values[0]==="") return res.json("0")
+    else if(values[1]==="") return res.json("1")
+    else if(values[2]==="") return res.json("2")
+    else if(values[3]==="") return res.json("3")
     db.query(q,[values],(err,data)=>{
         if(err) return res.json("err")
         return res.json("Added")
