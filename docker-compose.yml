@@ -1,0 +1,15 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./client  # Path to your frontend code
+      dockerfile: Dockerfile  # Use the Dockerfile for your frontend
+    ports:
+      - "3000:3000"  # Assuming your frontend runs on port 3000
+
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile  # Use the Dockerfile for your backend
+    ports:
+      - "5500:5500"  # Assuming your backend runs on port 5000

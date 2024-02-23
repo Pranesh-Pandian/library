@@ -32,6 +32,19 @@ body::-webkit-scrollbar{
     width: 100vw;
     margin: 0;
 }    
+#add{
+    position:relative;
+    height: 45px;
+    margin: 0 0 0 5px;
+    border-radius: 5px;
+    border: 0;
+    font-family: 'Kanit';
+    font-weight: 500;
+    cursor: pointer;
+}
+.ssss{
+    display: flex;
+}
 table,tr,td,th{
     border: 5px solid black;
 }
@@ -54,6 +67,34 @@ tr,td,th{
     font-size: 40px;
     margin: 0 0 10px 0;
     
+}
+ .head{
+    font-family: 'Kanit';
+ }
+
+ .doo{
+    font-family: 'Kanit';
+    border: 0;
+    height: 30px;
+    width: 50px;    
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.form input{
+    border: 0;
+    width: 500px;
+    height: 50px;
+    border-radius: 5px;
+    font-family: 'kanit';
+    font-size: 20px;
 }
 
 .sesel{

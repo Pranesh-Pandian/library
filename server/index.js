@@ -24,6 +24,15 @@ app.get("/books",(req,res)=>{
     })
 })
 
+app.post("/add",(req,res)=>{
+    const q="insert into books (name,author,subject,date) VALUE (?)"
+    const values=[req.body.name,req.body.author,req.body.subject,req.body.date]
+    console.log(req.body)
+    db.query(q,[values],(err,data)=>{
+        if(err) return res.json("err")
+        return res.json("Added")
+    })
+})
 app.listen(5500,()=>{
     console.log("Server started!")
  })

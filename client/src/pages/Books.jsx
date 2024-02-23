@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Home=()=>{
   const [data, setData] = useState([]);
@@ -52,15 +53,17 @@ const Home=()=>{
   return (
     <div className={sdata.length<=6 || count<=6 ? "finds" :"find"}>
       <div className="sum">
+
         <h1 id="tit">Prani-Library</h1>
         <div id="se">Search Books</div>
-        <div>
+        <div className="ssss">
         <select value={category} onChange={handleCatChange} className="sesel">
           <option value="name">Name</option>
           <option value="author">Author</option>
           <option value="subject">Subject</option>
         </select>
         <input type="text" placeholder={category} value={search} onChange={handleSearchChange} className="search"/>
+      <button id='add'><Link to="/add">ADD</Link></button>
         </div>
       </div>
       <span id="nbk">No of Books : {sdata.length}</span>
