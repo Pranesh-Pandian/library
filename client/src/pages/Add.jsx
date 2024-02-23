@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
@@ -42,9 +42,12 @@ const Add = () => {
     const handleClick= async e =>{
         e.preventDefault()
         try {
-            await axios.post("https://library-jops.onrender.com/add",emps)
+            const res=await axios.post("https://library-jops.onrender.com/add",emps)
+            if(res.data==="0") alert("Empty fields")
+            else{
             alert("Succesfully added")
             navi("/")
+            }
         } catch (err) {
             console.log(err)
         } 
