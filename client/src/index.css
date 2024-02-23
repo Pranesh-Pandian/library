@@ -60,6 +60,7 @@ tr,td,th{
     width: 150px;
     height: 30px;
     background-color: rgb(253, 173, 229);
+    /* align-items: center; */
 }
 
 #se{
@@ -72,11 +73,39 @@ tr,td,th{
     font-family: 'Kanit';
  }
 
+ .like{
+    /* background-color: antiquewhite; */
+    width: 20px;
+    text-align: center;
+    cursor: pointer;
+ }
+ .admi{
+    display: flex;
+    position:absolute;
+    align-self: flex-end;
+    margin: 20px 20px 0 0;
+}
+.admi button{
+    border: 0;
+    font-size: 25px;
+    font-family: 'Kanit';
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+}
+ .likes{
+    width: 20px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+ }
+
  .doo{
     font-family: 'Kanit';
     border: 0;
-    height: 30px;
-    width: 50px;    
+    height: 40px;
+    font-size: 20px;
+    width: 80px;    
     border-radius: 5px;
     cursor: pointer;
 }
@@ -155,4 +184,55 @@ tr,td,th{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+p{
+    margin: 0;
+    text-align: center;
+}
+.boro{
+    text-align: center;
+    width: 125px;
+    border: 0;
+    height: 35px;
+    font-family: 'Kanit';
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.finaldisp{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kanit';
+    /* gap: 20px; */
+}
+
+.finaldisp h1{
+    margin-top: -100px ;
+    font-size: 50px;
+}
+
+.finaldisp input{
+    border-radius: 5px;
+    border: 0;
+    font-size: 30px;
+    font-family: 'Kanit';
+    width: 400px;
+}
+
+.finaldisp button{
+    margin: 20px 0 0 0;
+    font-family: 'Kanit';
+    border: 0;
+    border-radius: 5px;
+    width: 80px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#add{
+    font-size: 20px;
 }

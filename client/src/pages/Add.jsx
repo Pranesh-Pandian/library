@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-// const ID_REGEX = /^[A-z][A-z0-9-_]{3,10}$/;
-
 const Add = () => {
 
     const [emps,setEmp]=useState({
@@ -26,13 +24,11 @@ const Add = () => {
           setInputType('text');
         }
       };
-        // const[user,setUser]=useState(false)
 
     const navi=useNavigate()
 
     const handleChange=(e)=>{
         setEmp(prev=>({...prev,[e.target.name]:e.target.value}))
-        // setInputValue(e.target.value);
     };
     const handleDChange=(e)=>{
         setEmp(prev=>({...prev,[e.target.name]:e.target.value}))
@@ -42,14 +38,14 @@ const Add = () => {
     const handleClick= async e =>{
         e.preventDefault()
         try {
-            const res=await axios.post("https://library-jops.onrender.com/add",emps)
+            const res=await axios.post("http://localhost:5500/add",emps)
             if(res.data==="0") alert("Name is Empty")
             else if(res.data==="1") alert("Author is Empty")
             else if(res.data==="2") alert("Subject is Empty")
             else if(res.data==="3") alert("Date is Empty")
             else{
             alert("Succesfully added")
-            navi("/")
+            navi("/adm")
             }
         } catch (err) {
             console.log(err)
@@ -74,18 +70,7 @@ const Add = () => {
         <input type="text" placeholder='Name' onChange={handleChange} name='name'/>
         <input type="text" placeholder='Author' onChange={handleChange} name='author'/>  
         <input type="text" placeholder='subject' onChange={handleChange} name='subject'/>
-        {/* <select name="gender" id="input" onChange={handleChange}>
-            <option value="" disabled selected id="pc">Gender (M or F)</option>
-            <option value="M">M</option>
-            <option value="F">F</option>
-        </select> */}
-        {/* <input type="text" placeholder='Gender (M or F)' onChange={handleChange} name='gender'/> */}
-        <input type={inputType} value={inputValue} onChange={handleDChange} onFocus={handleFocus} onBlur={handleBlur} max={maxDate} placeholder="Date of Birth" name="date"/>
-        {/* <input type="date" placeholder='Dob' onChange={handleChange} value={"Date Of Birth"} name='dob'/> */}
-        {/* <input type="number" placeholder='Age' onChange={handleChange} name='age' min={18}/> */}
-        {/* <input type="email" placeholder='Email' onChange={handleChange} name='email'/> */}
-        {/* <input type="number" placeholder='Percentage' onChange={handleChange} name='percent' min={0}/> */}
-        {/* <input type="number" placeholder='Phone Number' onChange={handleChange} name='phno'/> */}
+        <input type={inputType} value={inputValue} onChange={handleDChange} onFocus={handleFocus} onBlur={handleBlur} max={maxDate} placeholder="Publish Date" name="date"/>
         <button onClick={handleClick} className='doo'>Add</button>
     </div>
   )
